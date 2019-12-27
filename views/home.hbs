@@ -1,0 +1,303 @@
+<!-- HOME OWL -->
+		<div id="home-owl" class="owl-carousel owl-theme">
+			<!-- home item -->
+			<div class="home-item">
+				<!-- section background -->
+				<div class="section-bg" style="background-image: url(./img/slider-1.jpg);"></div>
+				<!-- /section background -->
+
+				<!-- home content -->
+				<div class="home">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								<div class="home-content">
+									<h1>Save The Animals</h1>
+									<p class="lead">Saving one animal won’t change the world,<br>
+but it will change the world for that one animal.</p>
+									<a href="/create" class="primary-button">Create event</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /home content -->
+			</div>
+			<!-- /home item -->
+
+			<!-- home item -->
+			<div class="home-item">
+				<!-- Background Image -->
+				<div class="section-bg" style="background-image: url(./img/background-2.jpg);"></div>
+				<!-- /Background Image -->
+
+				<!-- home content -->
+				<div class="home">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								<div class="home-content">
+									<h1>Become A Volunteer</h1>
+									<p class="lead">Become a volunteer of shareNcare and help us<br>in our vital work to make this world a better place for animals.</p>
+									<a href="/signup" class="primary-button">Join Us Now!</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /home content -->
+			</div>
+			<!-- /home item -->
+		</div>
+		<!-- /HOME OWL -->
+	</header>
+	<!-- /HEADER -->
+
+	<!-- ABOUT -->
+	<div id="about" class="section" style="margin-top: -14px;">
+		<!-- container -->
+		<div class="container" style="margin-top: -14px;">
+			<!-- row -->
+			<div class="row">
+				<!-- about content -->
+				<div class="col-md-5">
+					<div class="section-title" style="margin-top: -6px;">
+						<h2 class="title">What is shareNcare?</h2>
+						<p class="sub-title">ShareNcare is program to deliver stray animals a good life, good food and care. We are here to provide a platform to establishing events for Animal Welfare.</p>
+					</div>
+					<div class="about-content">
+						<p>Here we are providing a platform to beings who desires to use their time for good deeds towards stray animals by attending such event where anyone can work together.</p>
+						<a href="/about" class="primary-button">Read More</a>
+					</div>
+				</div>
+				<!-- /about content -->
+
+				<!-- about video -->
+				<div class="col-md-offset-1 col-md-6" >
+					
+						<video  controls preload="true" autoplay loop muted  style="border-radius: 33px;"><source src="./video/animal1.mp4" type="video/mp4" ></video>
+						
+				</div>
+				<!-- /about video -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /ABOUT -->
+	
+
+	
+
+	<!-- EVENTS -->
+	<div id="events" class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- section title -->
+				<div class="col-md-12">
+					<div class="section-title text-center">
+						
+						<h2 class="title">Upcoming Events</h2>
+						
+						<p class="sub-title">Here we are providing a platform to beings who desires to use their time for good deeds towards stray animals by attending such event where anyone can work together.</p>
+					</div>
+				</div>
+				<!-- /section title -->
+
+				<!-- event -->
+				{{#each event}}
+				<div class="col-md-6">
+					<div class="event">
+						<div class="event-img">
+							<a href="/events">
+								<img src="{{this.image}}" alt="">
+							</a>
+						</div>
+						<div class="event-content">
+							<h3><a href="/events">{{this.title}}</a></h3>
+							<ul class="event-meta">
+								<li><i class="fa fa-clock-o"></i>{{this.eventDateDay}}-{{this.eventDateMonth}}-{{this.eventDateYear}} </li>
+								<li><i class="fa fa-map-marker"></i> {{this.city}},{{this.state}}</li>
+							</ul>
+							<p>{{this.description}}</p>
+						</div>
+					</div>
+				</div>
+				{{/each}}
+				<!-- /event -->
+
+				
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /EVENTS -->
+
+	<!-- TESTIMONIAL -->
+	<div id="testimonial" class="section">
+		<!-- background section -->
+		<div class="section-bg" style="background-image: url(./img/background-2.jpg);" data-stellar-background-ratio="0.5"></div>
+		<!-- /background section -->
+
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- Testimonial owl -->
+				<div class="col-md-12">
+					<div id="testimonial-owl" class="owl-carousel owl-theme">
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								
+								<h3>Rahul</h3>
+								<span>Volunteer</span>
+							</div>
+							<div class="testimonial-quote">
+								<blockquote>
+									<p>Choose a spot and feed them at the same place, every day.</p>
+								</blockquote>
+							</div>
+						</div>
+						<!-- /testimonial -->
+
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								
+								<h3>Pankaj</h3>
+								<span>Volunteer</span>
+							</div>
+							<div class="testimonial-quote">
+								<blockquote>
+									<p>If you start feeding stray animals, be consistent about it</p>
+								</blockquote>
+							</div>
+						</div>
+						<!-- /testimonial -->
+
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								
+								<h3>Rohit</h3>
+								<span>Volunteer</span>
+							</div>
+							<div class="testimonial-quote">
+								<blockquote>
+									<p>Try giving them boiled food and strictly avoid anything that has spices, or is heavily fried</p>
+								</blockquote>
+							</div>
+						</div>
+						<!-- /testimonial -->
+
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								
+								<h3>Dinesh</h3>
+								<span>Volunteer</span>
+							</div>
+							<div class="testimonial-quote">
+								<blockquote>
+									<p>Build trust with the animals as you know nothing about their past, and might enrage them intentionally.</p>
+								</blockquote>
+							</div>
+						</div>
+						<!-- /testimonial -->
+					</div>
+				</div>
+				<!-- /Testimonial owl -->
+			</div>
+			<!-- /Row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /TESTIMONIAL -->
+
+	<!-- BLOG -->
+	<div id="blog" class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- section title -->
+				<div class="col-md-12">
+					<div class="section-title text-center">
+						<h2 class="title">Our Blog</h2>
+						
+					</div>
+				</div>
+				<!-- /section title -->
+
+				<!-- blog -->
+				<div class="col-md-4">
+					<div class="article">
+						<div class="article-img">
+							<a href="http://www.hurriyetdailynews.com/over-368-000-stray-animals-adopted-from-animal-shelters-ministry-148945" target="_blank"> 
+								<img src="http://i.hurimg.com/i/hdn/75/0x0/5dd653df67b0a92b540de9c5.jpg" alt="">
+							</a>
+						</div>
+						<div class="article-content">
+							<h3 class="article-title"><a href="http://www.hurriyetdailynews.com/over-368-000-stray-animals-adopted-from-animal-shelters-ministry-148945" target="_blank">Over 368,000 stray animals adopted from animal shelters: Ministry</a></h3>
+							<ul class="article-meta">
+								<li>21 November 2019</li>
+								<li>By Ankara</li>
+								
+							</ul>
+							<p>Around 31.8 million liras ($5.6 million) of financial support was provided for the construction of nursing houses for street animals in the last 10 years.</p>
+						</div>
+					</div>
+				</div>
+				<!-- /blog -->
+
+				<!-- blog -->
+				<div class="col-md-4">
+					<div class="article">
+						<div class="article-img">
+							<a href="https://timesofindia.indiatimes.com/life-style/relationships/pets/how-to-help-a-stray-dog/articleshow/64600974.cms" target="_blank">
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV4_c2XpTtlRtWEQqoJN-Wf7YVEcteo_7oyXVWI_r0hEm1vXT5&s" alt="">
+							</a>
+						</div>
+						<div class="article-content">
+							<h3 class="article-title"><a href="https://timesofindia.indiatimes.com/life-style/relationships/pets/how-to-help-a-stray-dog/articleshow/64600974.cms" target="_blank">How to help a stray dog</a></h3>
+							<ul class="article-meta">
+								<li>17 June 2018</li>
+								<li>By TNN</li>
+								
+							</ul>
+							<p>Most people, pet parents or not, empathise with the strays on the roads. It is heart breaking to see an animal abandoned, in pain/ill, without anyone to help.</p>
+						</div>
+					</div>
+				</div>
+				<!-- /blog -->
+
+				<!-- blog -->
+				<div class="col-md-4">
+					<div class="article">
+						<div class="article-img">
+							<a href="https://www.downtoearth.org.in/blog/governance/a-case-for-india-s-stray-dogs-65166" target="_blank">
+								<img src="https://cdn.downtoearth.org.in/library/large/2019-06-19/0.33898800_1560933857_45.jpg" alt="">
+							</a>
+						</div>
+						<div class="article-content">
+							<h3 class="article-title"><a href="https://www.downtoearth.org.in/blog/governance/a-case-for-india-s-stray-dogs-65166" target="_blank">A case for India’s stray dogs</a></h3>
+							<ul class="article-meta">
+								<li>19 June 2019</li>
+								<li>By Down to earth</li>
+								
+							</ul>
+							<p>Sterilising and vaccinating the dogs who live in our communities effectively and humanely controls their population, prevents rabies and reduces human-dog conflicts</p>
+						</div>
+					</div>
+				</div>
+				<!-- /blog -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /BLOG -->

@@ -1,0 +1,66 @@
+select option {
+    margin: 40px;
+    background: rgba(0,0,0,0.3);
+    color: white;
+    
+}
+
+.gender{
+	color: white;
+}
+
+.heading{
+	color: white;
+}
+form{
+	background-color: #000000a6;
+	padding: 52px 45px;
+	border-radius: 5px;
+}
+.form-control::-webkit-input-placeholder {
+	color: white;
+}
+input[type=text] {
+	width: 100%;
+	background-color: transparent;
+	color: white;
+  }
+  input[type=date] {
+	width: 100%;
+	background-color: transparent;
+	color: white;
+  }
+  input[type=email] {
+	width: 100%;
+	background-color: transparent;
+	color: white;
+  }
+  input[type=password] {
+	width: 100%;
+	background-color: transparent;
+	color: white;
+  }
+
+#wrap {
+	border-radius: 5px;
+	padding: 25px 45px;
+	margin: 50px 50px;
+
+}
+#mainheader {
+	color: white;
+}
+
+.form-control {
+	background: none;
+}
+#quotes {
+	background-color: #000000a6;
+	color: #c5e8c8;
+	padding: 80px 40px;
+	text-align: center;
+	border-radius: 9px;
+}
+
+
+

@@ -1,0 +1,54 @@
+#login {
+	border-radius: 9px;
+	background: rgba(9, 10, 9, 0.616);
+	width: 38%;
+	margin-top: 110px;
+	padding: 25px 45px;
+	margin-top: 117px;
+    margin-bottom: 83px;
+	margin-left: 100px;
+}
+.form-control::-webkit-input-placeholder {
+	color: white;
+}
+#frpd {
+	margin-left: 105px;
+}
+#newacc {
+	margin-left: 100px;
+}
+#username {
+	background: transparent;
+	color: white;
+}
+#password {
+	background: transparent;
+	color: white;
+}
+#btn {
+    width: 100%;
+    height: auto;
+    font-size: 23px;
+}
+input[type=text] {
+	width: 100%;
+	background-color: transparent;
+	color: white;
+  }
+  input[type=email] {
+	width: 100%;
+	background-color: transparent;
+	color: white;
+  }
+.form-control{
+    background-color: transparent;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-left: 626px;
+    margin-top: -886px;
+    border-style: outset;
+	border-radius: 13px;
+}

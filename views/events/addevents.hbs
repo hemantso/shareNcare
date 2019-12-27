@@ -1,0 +1,54 @@
+<div class="section-bg" style="background-image: url(https://d3n8a8pro7vhmx.cloudfront.net/msspan/pages/408/meta_images/original/stray_dogs.png?1496268959); width: 100%;
+    height: 987px;"></div>
+    <div class="container" class="form-group" id="login">
+     <form class="form-signin" action="/events" method="POST" enctype="multipart/form-data">
+     <input type="hidden" name="_id" value="{{event._id}}">
+    
+    <h1 style="color: white; text-align: center;">{{viewTitle}}</h1><hr style="width: 100%; color:white; height: 1px; background-color:white;" />
+    <p style="color: white;  text-align: center;">Create Event to  help strays and abandoned souls</p>
+   <div class="row">
+        <div class="col">
+            <input type="text" class="form-control"  id="fname"  name="title" placeholder="Event Title" value="{{event.title}}" required="true">
+        </div>
+   </div><br>
+    <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="State" name="state" id="state" value="{{event.state}}" required="true">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="City" name="city" id="city" value="{{event.city}}" required="true">
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="col">
+            <input type="text" class="form-control"  id="host"  name="host" placeholder="Host Name" value="{{event.host}}" required="true">
+            </div>
+        </div><br>
+     <div class="form-group">
+     <h5 style="color: white;">Description</h5>
+      <input type="text" class="form-control" name="description" value="{{event.description}}" placeholder="Describe your event to the volunteers" required="true" />
+    </div>
+     <div class="form-group">
+      <h5 style="color: white;">Requirements</h5>
+      <input type="text" class="form-control" name="requirements" value="{{event.requirements}}" placeholder="Minimum age, Health conditions"  required="true"/>
+    </div>
+    <div class="form-group">
+     <h5 style="color: white;">Event Date</h5>
+      <input type="date" class="form-control" name="eventDate" value="{{event.eventDate}}" required="true"/>
+      
+    </div>
+    
+     
+     
+      <div class="form-group">
+      <h5 style="color: white;">Event Image</h5>
+      <input type="file" class="form-control" name="myImage" value="{{event.myImage}}" placeholder="upload photos" />
+    </div><br>
+    
+   
+     <button type="submit" id="btn" class="btn btn-lg btn-success btn-sm"><b>Submit</b></button><br><br>
+           
+  </form>
+    </div>
+    </div>
+ 

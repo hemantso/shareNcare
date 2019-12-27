@@ -1,0 +1,23 @@
+/*----------------------------*\
+	Contacts input
+\*----------------------------*/
+
+.input {
+    width: 100%;
+    background-color: #FFF;
+    border: 1px solid #28a745;
+    height: 45px;
+    padding: 0px 15px;
+    -webkit-transition: 0.3s border-color;
+    transition: 0.3s border-color;
+  }
+  
+  textarea.input {
+    height: 90px;
+    padding: 15px;
+  }
+  
+  .input:focus {
+    border-color: #dc3545;
+    outline: #dc3545;
+  }

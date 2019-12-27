@@ -1,0 +1,127 @@
+ <base href="/">
+ <div class="section">
+    <div class="section-bg" style="background-image: url('https://wallpapertag.com/wallpaper/full/3/5/4/714958-puppy-wallpaper-desktop-1920x1080-mac.jpg'); width: 100%;height: 976px;"></div>
+    <div class="container emp-profile">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center mb-5" style="color: white;"><u>Profile</u></h1>
+                        
+                        <div class="profile-head ">
+                                   
+                                   
+                            <ul class="nav nav-tabs list-inline justify-content-center" id="myTab" role="tablist">
+                                <li class="nav-item act active">
+                                    <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                </li><br>
+                                <li class="nav-item act">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Event Created</a>
+                                </li>
+                                <li class="nav-item act">
+                                    <a class="nav-link" id="profile-tab2" data-toggle="tab" href="#profile2" role="tab" aria-controls="profile2" aria-selected="true">Event Joined</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>User Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{userdata.username}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{userdata.firstname}} {{userdata.lastname}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{userdata.email}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Phone</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{userdata.mobile}}</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="tab-pane " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                {{#each event}}
+                                    <h3 class="event-no" style="color: white;">Event {{increment @index}}</h3>
+                                <div class="row mt-3">
+                                    <div class="col-12">
+                                        <div class="row"> 
+                                            <div class="col-md-6">
+                                                <label>Title</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{this.title}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Location</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{this.state}},{{this.city}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Date</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{this.eventDateDay}}-{{this.eventDateMonth}}-{{this.eventDateYear}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 offset-md-3">
+                                                
+                                                     <a href="/profile/{{this._id}}" type="button" class="btn btn-success"  >
+                                                    <i class="fa fa-pencil"></i>
+                                                    </a>
+                                                    <a href="/profile/delete/{{this._id}}" type="button" onclick="return confirm('Are you sure to delete this record ?');" class="btn btn-danger">
+                                                    <i class="fa fa-trash"></i>
+                                                    </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{/each}}
+                            </div>
+                            <div class="tab-pane " id="profile2" role="tabpanel" aria-labelledby="profile-tab2">
+                                {{#each join}}
+                                    <h3 class="event-no" style="color: white;">Event {{increment @index}}</h3>
+                                <div class="row"> 
+                                    <div class="col-md-6 mt-3">
+                                        <label>Title</label>
+                                    </div>
+                                    <div class="col-md-6 mt-3">
+                                        <p>{{this.eventtitle}}</p>
+                                    </div>
+                                </div>
+                                
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>           
+        </div>
+</div>

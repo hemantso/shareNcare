@@ -1,0 +1,144 @@
+<div class="section">
+    <div id="page-header">
+        <div class="section-bg" style="background-image: url(img/background-2.jpg);"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="header-content">
+                        <h1>Events</h1>
+                        <ul class="breadcrumb">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/events">Events</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" id="msg" style=" margin-top: -228px;">
+    <br><br><br><br><br>
+<section class="event-list overlay-style-two sec-pad-2">
+ <a href="/create" class="btn btn-success" role="button" style="margin-bottom: -23px; margin-left: 124px;">Create Event</a>
+  
+           
+                
+                <form action="/events" method="get">
+                 <div class="row justify-content-center" style="margin-top: -17px; margin-left: 291px; ">
+                 <div class="col-md-9 ">
+                    <input type="text" id="userInput" style="     border-width: 2px;" class="form-control" placeholder="Search By Location" name="city"></div>
+                    <div class="col-md-3">
+                    <button type="submit" class="btn btn-success ">Search </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+       
+        <div class="container" style="margin-top: -74px;">
+            
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 event-column">
+                    {{#each event}}
+                    <div class="event-content-two single-item wow fadeInUp animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                        <div class="content-box">
+                            <div class="image img-box">
+                                <img src="{{this.image}}" style="height: 227px;" alt="">
+                                <div class="overlay">
+                                    <div class="overlay-content">
+                                        <div class="content">
+                                            <a class="link-btn" href="#">
+                                                <i class="fa fa-link"></i>
+                                            </a> 
+                                        </div>
+                                    </div>                               
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h4 id="title" value="\{{this.title}}"> {{this.title}}</h4>
+                                
+                                 
+                                <ul class="info-box">
+                                    <li id="locationcity" value="\{{this.city}}"><i class="fa fa-map-marker"></i>{{this.city}}</li>
+                                    <li id="locationstate" value="\{{this.state}}"><i class="fa fa-map-marker"></i>{{this.state}}</li>
+                                </ul>
+                                <div class="text"><h6>Hosted By:-</h6>
+                                    <p id="user" value="\{{this.host}}" style="margin-left: 92px; margin-top: -29px;">{{this.host}}</p>
+                                </div>
+                                 <ul class="info-box">
+                                    <li id="contact"><i class="fa fa-phone"></i>{{this.mobile}}</li>
+                                    <li id="email"><i class="fa fa-envelope"></i>{{this.email}}</li>
+                                 </ul>
+                                <div class="text">
+                                    <h6>Description:-</h6>
+                                    <p style="margin-left: 94px; margin-top: -29px;">{{this.description}}</p>
+                                     <h6>Requirements:-</h6>
+                                        <p style="margin-left: 115px; margin-top: -29px;">{{this.requirements}}</p>
+                                        
+                                    
+                                </ul>
+                                </div>
+                                
+                            </div>
+                            <div class="date centred" style="margin-top: -68px;"><h4><u>Event date</u></h4>
+                                <span id="eventday" value="\{{this.eventDateDay}}">{{this.eventDateDay}}</span><p id="eventmonth"  value="\{{this.eventDateMonth}}">{{this.eventDateMonth}}</p><p id="eventyear"  value="\{{this.eventDateYear}}">{{this.eventDateYear}}</p></div>
+                            
+                                <div class="link"><button type="submit"    class="btn btn-success" value="{{this._id}}" id="join">Join Event</button>
+                                </div>
+                                
+                        </div>
+                         
+                    </div>
+                   
+                    {{/each}}
+                </div>
+               <br>
+                
+            <ul class="pagination centred clearfix mb-5">
+                <li><a href="?page={{pageprevious}}"><i class="fa fa-angle-left"></i></a></li>
+                <li><a href="/events?page=1" >1</a></li>
+                <li><a href="/events?page=2">2</a></li>
+                <li><a href="/events?page=3">3</a></li>
+                <li><a href="/events?page={{pagenext}}"><i class="fa fa-angle-right"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    </div>
+
+
+<script>
+    
+    
+  
+
+ $(document).on("click", "#join", function(e){
+    event.preventDefault();
+       
+      
+     var join = $(this).val();
+     var data = {
+         id: join
+     }
+    
+   $.ajax({
+      type: "POST",
+      dataType: 'JSON',
+      contentType: 'application/json',
+      url: '/join/join',
+      data: JSON.stringify(data),
+     success: function(data){
+         if (data.success)
+            alert(data.success);
+       else if (data.warning)
+            alert(data.warning);
+         }
+         
+       
+        
+ });
+ 
+ });
+
+</script>

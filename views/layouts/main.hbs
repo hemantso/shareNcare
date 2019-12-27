@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+</body>
+</html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+     <base href="/">
+	<title>{{title}}</title>
+	<link rel="icon" type="image/gif" href="img/shortcut.jpg">
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400%7CSource+Sans+Pro:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Owl Carousel -->
+	<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
+	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link type="text/css" rel="stylesheet" href="css/{{style}}" />
+	<!-- jquery CDN link -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+
+		<!-- NAVGATION -->
+		<div class="my-header container">
+		<nav id="main-navbar" class="my-navbar navbar navbar-expand-lg navbar-light bg-light ">
+			<div class="container">
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a class="logo" href="/"><img src="img/logo.png" alt="logo"></a>
+					</div>
+					<!-- Logo -->
+
+					
+
+				</div>
+
+
+				<!-- Nav menu -->
+				<div class="collapse navbar-collapse navbar-fixed-top" id="navbarSupportedContent">
+        <ul class="navbar-menu nav navbar-nav ml-auto nav-custom">
+						<li><a href="/">Home</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/events">Events</a></li>
+						<li><a href="/contact">Contact</a></li>
+
+
+
+				{{#if user}}
+				   <li style="margin-left: 50px;">
+						<button class="btn btn-outline-success" style="border-radius: 18px; margin-left: -41px;"   onclick="location.href = '/profile';">Profile</button>	</li>
+				   <li>
+						<button class="btn btn-outline-success" style=" margin-left: 14px; border-radius: 18px;"  onclick="location.href = '/logout';">Logout</button>	</li>
+
+							{{else}}
+						 <li>
+							<button class="btn btn-outline-success mr-1"  style="border-radius: 18px; " onclick="location.href = '/signup';">Signup
+									</button>
+								</li>
+							<li>
+								<button class="btn btn-outline-success" style="     border-radius: 18px; margin-left: 14px" onclick="location.href = '/login';">Login</button>
+
+								</li>
+						{{/if}}
+						<li>
+								<button class="btn btn-outline-success" id="don" onclick="location.href = '/donation';">Donate Now</button>
+
+								</li>
+					</ul>
+
+				<!-- Nav menu -->
+			</div>
+		</nav>
+      </div>
+
+		<!-- /NAVGATION -->
+
+		{{{body}}}
+
+	<!-- FOOTER -->
+		<footer id="footer" class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- footer contact -->
+				<div class="col-md-4">
+					<div class="footer">
+						<div class="footer-logo">
+							<a class="logo" href="/"><img src="./img/logo.png" alt=""></a>
+						</div>
+						<p>ShareNcare is program to deliver stray animals a good life, good food and care. We are here to provide a platform to establishing events for Animal Welfare.</p>
+						<ul class="footer-contact">
+							<li><i class="fa fa-map-marker"></i> Cannaught Place, Delhi</li>
+							<li><i class="fa fa-phone"></i> 8800926672, 8275147413</li>
+							<li><i class="fa fa-phone"></i> 9765555546</li>
+							<li><i class="fa fa-envelope"></i> <a href="#">sonihemant4741@gmail.com</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- /footer contact -->
+
+				<!-- footer galery -->
+				<div class="col-md-4">
+					<div class="footer">
+						<h3 class="footer-title">Gallery</h3>
+						<ul class="footer-galery">
+							<li><a href="#"><img src="./img/gallary-1.jpg" style="height: 110px;" alt=""></a></li>
+							<li><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA__j_P4wahh3ky1eOnkR7KTA9QTa-LU5EWKAPZ3kHgydzXYk2MQ&s" style="height: 110px;" alt=""></a></li>
+							<li><a href="#"><img src="https://imgk.timesnownews.com/story/1559721558-Stray_dogs_poisoned.jpg?tr=w-600,h-450"  style="height: 110px;"  alt=""></a></li>
+							<li><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLnm4uFJjLSmS9IOGLnAmHJb-_h9XNZLnM-rvPZCcyqUz-yWR2vw&s" style="height: 110px;" alt=""></a></li>
+							<li><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwb3LmRCf33e8ZNoVitYL7c6atrYWNJNNwMGs0K8rsStR2BVy0AQ&s" style="height: 110px;" alt=""></a></li>
+							<li><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRydMHC5pmbLs55reCENqmsrWFSUSvMXJ7BsAfhhGgBoU-Q5IJAmQ&s"  style="height: 110px;" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- /footer galery -->
+
+				<!-- footer newsletter -->
+				<div class="col-md-4">
+					<div class="footer">
+						<h3 class="footer-title">Get In Touch With Us</h3>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5926635.330471799!2d76.4380765419113!3d23.00680191616874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1573758139335!5m2!1sen!2sin" width="100%" height="250" frameborder="0" style="border:1px solid;" allowfullscreen=""></iframe>
+						<ul class="footer-social">
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- /footer newsletter -->
+				
+			</div>
+			<!-- /row -->
+
+			<!-- footer copyright & nav -->
+			
+			</div>
+			<!-- /footer copyright & nav -->
+		</div>
+		<!-- /container -->
+	</footer>
+	<!-- /FOOTER -->
+
+	<!-- jQuery Plugins -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

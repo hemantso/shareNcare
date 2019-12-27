@@ -1,0 +1,122 @@
+<div class="section-bg" style="background-image: url(img/signup.jpg); width: 100%;height: 976px;">
+  <div class="section">
+    {{#if alert}}
+    <div class="alert alert-danger alert-dismissible" id="alert" style="margin-top: 16px;">
+        <a href="/signup" class="close" aria-label="close">&times;</a>
+        <strong>{{alert}}</strong>Please check your UserName & Email 
+    </div>
+    {{/if}}
+    <div class=" mx-auto" id="wrap">
+	    <div class="row   mx-auto">
+        <div class="col-md-6">
+          <form action="/register" method="post" accept-charset="utf-8" class="form justify-content-center" role="form" autocomplete="off">
+            <h1 id="mainheader">Create an account</h1><hr>
+            <div class="custom-control custom-radio custom-control-inline">
+              <h5 style=" color: white;margin-right: 59px; margin-left: -22px;"> Are you a organisation ?</h5>
+              <input type="radio" onclick="javascript:yesnoCheck();" class="custom-control-input" id="yesCheck" name="org" value="yes"  >
+              <label class="custom-control-label" for="yesCheck" style="color: white;margin-top: 3px;margin-right: 30px;">Yes</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" onclick="javascript:yesnoCheck();" class="custom-control-input" id="noCheck" name="org" value="No" >
+              <label class="custom-control-label" for="noCheck"  style="color: white;">No</label>
+            </div><br><br>
+            <div id="ifYes" style="visibility: hidden">
+              <input type="text" id="orgName" name="orgname" class="form-control" placeholder="Enter Organisation Name" >
+            </div><br> 
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="username" id="username" name="username" required>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Mobile number" maxlength="10" name="mobile" id="phone"  required="true">
+              </div>
+            </div> <br>
+            <div class="row">
+              <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="First name" id="fname" name="firstname" required="true">
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Last name" name="lastname" id="lname" required="true">
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="State" name="state" id="state" required="true">
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="City" name="city" id="city" required="true">
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="col-md-6">
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email-id" required="true">
+              </div>
+              <div class="col-md-6">
+                <input type="date" class="form-control" placeholder="MM/DD/YYYY" name="birth" id="birth" required="true">
+              </div>
+            </div><br>
+            <div class="row" id="row">
+              <div class="custom-control custom-radio custom-control-inline" >
+                <h5 class="gender" required="true">Gender:</h5>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline" >
+                <input type="radio" class="custom-control-input" id="Male" name="gender" value="Male">
+                <label class="custom-control-label" for="Male" style="color: white;">Male</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="Female" name="gender" value="Female">
+                <label class="custom-control-label" for="Female" style="color: white;">Female</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="other" name="gender" value="Others">
+                <label class="custom-control-label" for="other" style="color: white;">Other</label>
+              </div>
+            </div><br>
+            <input type="password"  id="password" class="form-control"  pattern=".{8,12}" title="8 to 12 characters"  name="password" placeholder="Enter new password"  required><br>
+            <input type="password"  class="form-control"  pattern=".{8,12}"  title="8 to 12 characters" name="confirmpassword" placeholder="Confirm Password" id="confirm_password" required><br>
+            <button class="btn btn-lg btn-success btn-block signup-btn" type="submit">Create my account</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div id="quotes" >
+            <h1 class="heading">Animal Welfare</h1><br>
+            <p>“Humanity's true moral test, its fundamental test…consists of its attitude towards those who are at its mercy: animals.”</p>
+            <p>“If you don't like pictures of animal cruelty being posted on social media, you need to help stop the cruelty, not the pictures. You should be bothered that its happening, not that you saw it.”
+                        ― Marie Sarantakis</p>
+            <p>“Forests and meat animals compete for the same land. The prodigious appetite of the affluent nations for meat means that agribusiness can pay more than those who want to preserve or restore the forest. We are, quite literally, gambling with the future of our planet – for the sake of hamburgers”
+                                ― Peter Singer, Animal Liberation</p>
+            <p>“One saw a bird dying, shot by a man. It was flying with rhythmic beat and beautifully, with such freedom and lack of fear. And the gun shattered it; it fell to the earth and all the life had gone out of it. A dog fetched it, and the man collected other dead birds. He was chattering with his friend and seemed so utterly indifferent. All that he was concerned with was bringing down so many birds, and it was over as far as he was concerned. They are killing all over the world. Those marvellous, great animals of the sea, the whales, are killed by the million, and the tiger and so many other animals are now becoming endangered species. Man is the only animal that is to be dreaded.” ― Jiddu Krishnamurti, Krishnamurti to Himself: His Last Journal</p>
+            <p>“The animals of the planet are in desperate peril... Without free animal life I believe we will lose the spiritual equivalent of oxygen.”
+                                                ― Alice Walker</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+  function yesnoCheck() {
+    if (document.getElementById('yesCheck').checked) {
+        document.getElementById('ifYes').style.visibility = 'visible';
+    }else
+    document.getElementById('ifYes').style.visibility = 'hidden';
+  }
+
+var password = document.getElementById("password"),confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+
+setTimeout(function(){
+  $('#alert').remove();
+}, 2000);
+  </script>
