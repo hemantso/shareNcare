@@ -51,8 +51,6 @@
 Share N care is an application where user can create an event to help stray animals. And other user can check the event as per localaity and can participate or contribute to the event. This application build using ExpressJS, MongoDB, Bootstrap & use of cloudinary to store event images.
 
 ![image](./public/img/homescreen.png)
-![image](./src/assets/img/search.png)
-![image](./src/assets/img/details.png)
 
 #### Routes:
 
