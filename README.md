@@ -18,7 +18,7 @@
   <h3 align="center">ShareNcare</h3>
 
   <p align="center">
-    At Share N care create event & join event as per location & help the Stray animals getting food & shelter.
+    At Share N care user can create event & join event as per location & help the Stray animals getting food & shelter.
     <br />
     <a href="https://github.com/hemant-soni-vst-au4/shareNcare"><strong>Explore the docs »</strong></a>
     <br />
